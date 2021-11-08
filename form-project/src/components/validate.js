@@ -10,7 +10,7 @@ export const validate = data =>{
 
     if(!data.email){
         errors.email = "Email required"
-    }else if(!/\S+@\S+\.\s+/.test(data.email)){
+    }else if(!/\S+@\S+\.\S+/.test(data.email)){
         errors.email = "Email adress is invalid"
     }else {
         delete errors.email
@@ -32,10 +32,10 @@ export const validate = data =>{
         delete errors.confirmPassword 
     }
 
-    if(data.isAcceped){
-        delete errors.isAcceped
+    if(data.isAccepted){
+        delete errors.isAccepted
     }else{
-        errors.isAcceped ="Please accept privacy policy"
+        errors.isAccepted ="Please accept privacy policy"
     }
 
     return errors;
