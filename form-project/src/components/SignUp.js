@@ -25,7 +25,7 @@ const SignUp = () => {
     },[data,touched])
 
     const changeHandler = e =>{
-        if(e.target.naem === "isAccepted"){
+        if(e.target.name === "isAccepted"){
             setData({...data,[e.target.name]:e.target.checked})
         }else {
             setData({...data,[e.target.name]:e.target.value})
